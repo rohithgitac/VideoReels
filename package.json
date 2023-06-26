@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "npm-run-all --parallel server client",
+    "server": "node server",
+    "client": "cd tiktok-frontend && npm start"
   },
   "author": "Rohith A B",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.2.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5"
   }
 }
